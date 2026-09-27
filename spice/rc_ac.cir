@@ -1,1 +1,10 @@
+* Ideal low-voltage RC filter, AC small-signal analysis
+* Source has 1 V AC amplitude and 1.65 V DC bias.
 
+Vsignal in 0 DC 1.65 AC 1
+Rfilter in out 10k
+Cfilter out 0 10n
+
+.ac dec 100 10 100k
+
+.end
