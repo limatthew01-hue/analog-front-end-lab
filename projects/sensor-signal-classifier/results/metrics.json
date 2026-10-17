@@ -1,0 +1,158 @@
+{
+  "synthetic_only": true,
+  "seed": 7,
+  "devices": 40,
+  "windows_per_class_per_device": 10,
+  "samples_per_record": 512,
+  "sample_hz": 8000,
+  "adc_bits": 12,
+  "reference_v": 3.3,
+  "nominal_noise_snr_db": [
+    20,
+    40
+  ],
+  "features": [
+    "mean_v",
+    "rms_ac_v",
+    "peak_to_peak_v",
+    "crest_factor",
+    "kurtosis",
+    "zero_cross_hz",
+    "flat_fraction",
+    "longest_flat_fraction",
+    "rail_fraction",
+    "dominant_hz",
+    "spectral_centroid_hz",
+    "high_band_fraction",
+    "spectral_entropy",
+    "difference_rms_v",
+    "iqr_v"
+  ],
+  "split_device_ids": {
+    "train": [
+      0,
+      3,
+      4,
+      9,
+      10,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      26,
+      27,
+      28,
+      30,
+      32,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "validation": [
+      1,
+      6,
+      7,
+      8,
+      15,
+      16,
+      29,
+      33
+    ],
+    "test": [
+      2,
+      5,
+      11,
+      21,
+      23,
+      25,
+      31,
+      34
+    ]
+  },
+  "split_records": {
+    "train": 960,
+    "validation": 320,
+    "test": 320
+  },
+  "selected_model": "Logistic regression",
+  "selection": "validation macro F1; ties prefer logistic regression; no refit on validation/test",
+  "models": [
+    {
+      "model": "Dummy",
+      "validation_macro_f1": 0.1,
+      "accuracy": 0.25,
+      "macro_f1": 0.1
+    },
+    {
+      "model": "EE rules",
+      "validation_macro_f1": 0.8919011082693946,
+      "accuracy": 0.8625,
+      "macro_f1": 0.8587464628287043
+    },
+    {
+      "model": "Logistic regression",
+      "validation_macro_f1": 1.0,
+      "accuracy": 0.996875,
+      "macro_f1": 0.996874877924919
+    },
+    {
+      "model": "Random forest",
+      "validation_macro_f1": 1.0,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  ],
+  "selected_classification_report": {
+    "normal": {
+      "precision": 0.9876543209876543,
+      "recall": 1.0,
+      "f1-score": 0.9937888198757764,
+      "support": 80.0
+    },
+    "clipped": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 80.0
+    },
+    "dropout": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 80.0
+    },
+    "interference": {
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1-score": 0.9937106918238994,
+      "support": 80.0
+    },
+    "accuracy": 0.996875,
+    "macro avg": {
+      "precision": 0.9969135802469136,
+      "recall": 0.996875,
+      "f1-score": 0.996874877924919,
+      "support": 320.0
+    },
+    "weighted avg": {
+      "precision": 0.9969135802469136,
+      "recall": 0.996875,
+      "f1-score": 0.9968748779249189,
+      "support": 320.0
+    }
+  },
+  "waveform_sha256": "c7df87e94d4a2d539c58c2dc0a82e7900c8c6cf5d476bd2f87171f1b2c052bd8",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  }
+}

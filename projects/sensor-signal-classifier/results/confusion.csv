@@ -1,0 +1,5 @@
+actual,normal,clipped,dropout,interference
+normal,80,0,0,0
+clipped,0,80,0,0
+dropout,0,0,80,0
+interference,1,0,0,79

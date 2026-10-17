@@ -96,6 +96,10 @@ The tests check DC gain, the -3.0103 dB / -45° cutoff, high-frequency roll-off,
 
 The main simulation assumes an ideal source, ideal bias, and infinite ADC input impedance. A finite resistive load changes both gain and cutoff; a real ADC's switched sampling capacitor is more complicated still. Reference noise, amplifier behavior, INL/DNL, aperture jitter, parasitics, and physical anti-alias performance are excluded. A hardware extension needs a chosen ADC, acquisition/settling analysis, real bias circuitry, and measured waveforms before making board-level claims.
 
+## Related machine-learning project
+
+[Sensor Signal Classifier](projects/sensor-signal-classifier/) is a separate personal project in this repository. It compares fixed rules, logistic regression, and a random forest on simulated ADC signal conditions, with device-disjoint splits and a noise stress test. Its code, setup instructions, and results are self-contained in that folder.
+
 ## References
 
 - [Texas Instruments: low-pass filtered non-inverting amplifier](https://www.ti.com/tool/CIRCUIT060057): background on an RC input pole. This lab models the passive RC portion only, not TI's amplifier circuit.
