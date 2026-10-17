@@ -1,0 +1,15 @@
+* Biased sensor sine plus a separate series interference source.
+Vbias bias 0 DC 1.65
+Vsignal sensor bias SIN(0 0.1 100)
+Vinterference in sensor SIN(0 0.04 20000)
+Rfilter in out 10000
+Cfilter out 0 1e-08 IC=1.65
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+tran 0.5u 0.03 0 0.5u uic
+wrdata build/spice_transient.txt v(in) v(out)
+quit
+.endc
+.end

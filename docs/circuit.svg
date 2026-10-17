@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">RC sensor front-end with an ideal ADC</title>
+  <desc id="desc">A voltage source drives a ten kilo-ohm series resistor. A ten nanofarad capacitor shunts the output to ground. An ideal high-impedance twelve-bit ADC samples this output using a 3.3 volt reference.</desc>
+  <rect width="1000" height="300" fill="white"/>
+  <g fill="#333" font-family="Arial,sans-serif" font-size="19">
+    <text x="38" y="35" font-size="23">Biased sensor input, RC low-pass, ideal ADC</text>
+    <text x="65" y="100">Vin</text><text x="225" y="100">10 kΩ</text>
+    <text x="405" y="105">Vout</text><text x="345" y="200">10 nF</text>
+    <text x="585" y="143">Ideal high-Z ADC</text><text x="585" y="172">12 bit · Vref = 3.3 V</text>
+    <text x="815" y="124">Codes 0–4095</text>
+    <text x="38" y="258" font-size="16">Vin = 1.65 V + 100 mV peak at 100 Hz + 40 mV peak at 20 kHz.</text>
+    <text x="38" y="283" font-size="15" fill="#666">Simulation model. Reference noise, parasitics, and ADC sample-and-hold loading are excluded.</text>
+  </g>
+  <g fill="none" stroke="#333" stroke-width="2.2" stroke-linejoin="round">
+    <circle cx="95" cy="155" r="25"/><path d="M76 155q9-18 18 0t20 0"/>
+    <path d="M95 130v-5h95l8-10 12 20 12-20 12 20 12-20 12 20 12-20 12 20 8-10h235"/>
+    <path d="M95 180v30m-17 0h34m-28 7h22m-16 7h10"/>
+    <path d="M435 125v45m-19 0h38m-38 10h38m-19 0v30m-17 0h34m-28 7h22m-16 7h10"/>
+    <rect x="525" y="105" width="260" height="90" rx="2" stroke="#26785e"/>
+    <path d="M785 150h150m-10-7 10 7-10 7"/>
+  </g>
+  <circle cx="435" cy="125" r="4" fill="#333"/>
+</svg>

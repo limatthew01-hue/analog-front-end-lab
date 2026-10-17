@@ -1,10 +1,13 @@
-* Ideal low-voltage RC filter, AC small-signal analysis
-* Source has 1 V AC amplitude and 1.65 V DC bias.
-
+* RC filter: 1 V AC is a small-signal normalization, not an actual rail swing.
 Vsignal in 0 DC 1.65 AC 1
-Rfilter in out 10k
-Cfilter out 0 10n
-
-.ac dec 100 10 100k
-
+Rfilter in out 10000
+Cfilter out 0 1e-08
+.control
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+ac dec 100 10 100k
+wrdata build/spice_ac.txt real(v(out)) imag(v(out))
+quit
+.endc
 .end
