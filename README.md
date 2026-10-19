@@ -100,6 +100,10 @@ The main simulation assumes an ideal source, ideal bias, and infinite ADC input 
 
 [Sensor Signal Classifier](projects/sensor-signal-classifier/) is a separate personal project in this repository. It compares fixed rules, logistic regression, and a random forest on simulated ADC signal conditions, with device-disjoint splits and a noise stress test. Its code, setup instructions, and results are self-contained in that folder.
 
+## Related motor-control project
+
+[Zybo Motor Speed Controller](projects/zybo-motor-controller/) implements encoder feedback, fixed-point PI control, 20 kHz PWM, a CRC-protected serial link, and a Python operator panel. It includes a switched-PWM motor simulation, self-checking RTL tests, and a hardware wiring guide. Physical board and motor measurements are pending. This project is self-contained in its own folder.
+
 ## References
 
 - [Texas Instruments: low-pass filtered non-inverting amplifier](https://www.ti.com/tool/CIRCUIT060057): background on an RC input pole. This lab models the passive RC portion only, not TI's amplifier circuit.

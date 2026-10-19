@@ -1,0 +1,75 @@
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python -m unittest discover -s tests -v
+test_anti_windup_bounds_and_recovery (test_motor.ControllerTests.test_anti_windup_bounds_and_recovery) ... ok
+test_closed_loop_tracks_and_rejects_load (test_motor.ControllerTests.test_closed_loop_tracks_and_rejects_load) ... ok
+test_disabled_and_zero_clear_integrator (test_motor.ControllerTests.test_disabled_and_zero_clear_integrator) ... ok
+test_division_matches_signed_hdl (test_motor.ControllerTests.test_division_matches_signed_hdl) ... ok
+test_encoder_conversion_and_filter (test_motor.ControllerTests.test_encoder_conversion_and_filter) ... ok
+test_known_first_control_step (test_motor.ControllerTests.test_known_first_control_step) ... ok
+test_motor_coasts_after_stop (test_motor.ControllerTests.test_motor_coasts_after_stop) ... ok
+test_negative_encoder_speed (test_motor.ControllerTests.test_negative_encoder_speed) ... ok
+test_output_never_negative (test_motor.ControllerTests.test_output_never_negative) ... ok
+test_plant_matches_analytic_solution (test_motor.ControllerTests.test_plant_matches_analytic_solution) ... ok
+test_unreachable_target_remains_bounded (test_motor.ControllerTests.test_unreachable_target_remains_bounded) ... ok
+test_clear_is_stop_only (test_motor.ProtocolTests.test_clear_is_stop_only) ... ok
+test_command_fields (test_motor.ProtocolTests.test_command_fields) ... ok
+test_crc_standard_check (test_motor.ProtocolTests.test_crc_standard_check) ... ok
+test_fragmented_telemetry (test_motor.ProtocolTests.test_fragmented_telemetry) ... ok
+test_resynchronizes_after_noise (test_motor.ProtocolTests.test_resynchronizes_after_noise) ... ok
+test_signed_rpm_and_status (test_motor.ProtocolTests.test_signed_rpm_and_status) ... ok
+test_single_bit_corruption_rejected (test_motor.ProtocolTests.test_single_bit_corruption_rejected) ... ok
+test_target_bounds (test_motor.ProtocolTests.test_target_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.004s
+
+OK
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s motor_top -o build/motor_top.vvp rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_pwm -o build/tb_pwm.vvp sim/tb_pwm.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_pwm.vvp
+PASS pwm: all 1001 duties, period 1000, frame latch, immediate inhibit
+sim/tb_pwm.v:29: $finish called at 10021051000 (1ps)
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_quadrature -o build/tb_quadrature.vvp sim/tb_quadrature.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_quadrature.vvp
+PASS quadrature: startup, both directions, invalid transitions, saturation
+sim/tb_quadrature.v:27: $finish called at 47660000 (1ps)
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_pi -o build/tb_pi.vvp sim/tb_pi.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_pi.vvp
+PASS pi: 541 fixed-point vectors including saturation and stop
+sim/tb_pi.v:24: $finish called at 5440000 (1ps)
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_core -o build/tb_core.vvp sim/tb_core.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_core.vvp
+PASS core: arm, coast, driver latch, clear, watchdog, stall, encoder faults, bounds
+sim/tb_core.v:70: $finish called at 435440000 (1ps)
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_serial -o build/tb_serial.vvp sim/tb_serial.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_serial.vvp
+PASS serial: CRC, bounds, flags, truncation, UART framing, telemetry snapshot
+sim/tb_serial.v:81: $finish called at 331700000 (1ps)
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_top -o build/tb_top.vvp sim/tb_top.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_top.vvp
+PASS top: UART-to-PWM integration, synchronized arm/fault, stop, clear, reset
+sim/tb_top.v:50: $finish called at 122060000 (1ps)
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_closed_loop -o build/tb_closed_loop.vvp sim/tb_closed_loop.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_closed_loop.vvp
+PASS closed loop: switched-PWM plant, encoder feedback, load change, stop
+sim/tb_closed_loop.v:43: $finish called at 5000050000000 (1ps)
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/iverilog -B /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/lib/x86_64-linux-gnu/ivl -g2012 -Wall -s tb_pwm -Ptb_pwm.PERIOD=6250 -o build/tb_pwm_production.vvp sim/tb_pwm.v rtl/motor_core.v rtl/motor_top.v rtl/pi_controller.v rtl/pwm.v rtl/quadrature.v rtl/serial_link.v rtl/uart.v
+
+$ /workspace/scratch/2256469150c4/tmp/iverilog-runtime/usr/bin/vvp build/tb_pwm_production.vvp
+PASS pwm: all 1001 duties, period 6250, frame latch, immediate inhibit
+sim/tb_pwm.v:29: $finish called at 62573551000 (1ps)

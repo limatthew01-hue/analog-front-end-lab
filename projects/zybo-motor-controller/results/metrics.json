@@ -1,0 +1,43 @@
+{
+  "status": "simulation only; no physical motor measurements",
+  "python_tests": 19,
+  "rtl_testbenches": 7,
+  "pi_reference_vectors": 541,
+  "pwm_duties_checked": 1001,
+  "target_rpm": 300,
+  "load_step_rpm": 90,
+  "rtl_clock_hz": 200000,
+  "rtl_pwm_hz": 1000,
+  "production_clock_hz": 125000000,
+  "production_pwm_hz": 20000,
+  "control_hz": 50,
+  "cpr_milli": 358331,
+  "plant_assumptions": {
+    "no_load_rpm": 720,
+    "tau_s": 0.12,
+    "equation": "d(rpm)/dt=(720*pwm_bit-load_rpm-rpm)/0.12, clamped at zero"
+  },
+  "kp_q8": 256,
+  "ki_step_q8": 24,
+  "max_duty_permille": 900,
+  "before_load_mean_rpm": 297.72918503999995,
+  "after_load_mean_rpm": 298.12818884,
+  "after_load_mean_abs_error_rpm": 1.8718111600000042,
+  "after_load_max_abs_error_rpm": 2.0204160000000115,
+  "load_step_min_rpm": 243.309377,
+  "startup_overshoot_percent": 0.0,
+  "startup_settling_2percent_s": 1.259995,
+  "load_recovery_2percent_s": 1.0399949999999998,
+  "before_load_mean_duty_permille": 416.52,
+  "after_load_mean_duty_permille": 543.12,
+  "open_loop_after_load_mean_rpm": 210.2400728270652,
+  "trace_sha256": "1b9040bac73281716454b5bd8b5a444085f5434b77384fb16bf1f5e0a3dbfb15",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "sensitivity_cases": 54,
+  "reachable_cases": 48,
+  "reachable_case_worst_final_mae_rpm": 0.4467855621841002
+}

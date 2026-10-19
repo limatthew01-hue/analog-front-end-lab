@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-labelledby="title desc">
+  <title id="title">Zybo motor controller connection overview</title>
+  <desc id="desc">A 3.3 volt USB UART adapter connects to the Zybo JE9 and JE10. The Zybo sends PWM and a low direction input to a DRV8833, which drives the motor from a separate 6 volt supply. Encoder channels return to JE3 and JE4 with encoder power at 3.3 volts. The fault output returns to JE7 with a pull-up. All grounds share a reference.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#315e7b"/></marker></defs>
+  <rect width="1000" height="680" fill="#fcfcfa"/>
+  <g font-family="Arial,sans-serif" fill="#30363b">
+    <text x="40" y="44" font-size="25" font-weight="bold">Motor speed controller · connection overview</text>
+    <text x="40" y="73" font-size="16" fill="#64696d">Reference: Zybo Z7 + Pololu #2130 driver + #5133 motor/encoder</text>
+    <g fill="#edf3f6" stroke="#315e7b" stroke-width="2">
+      <rect x="40" y="120" width="235" height="120" rx="5"/>
+      <rect x="365" y="120" width="265" height="260" rx="5"/>
+      <rect x="735" y="120" width="225" height="190" rx="5"/>
+      <rect x="735" y="435" width="225" height="120" rx="5"/>
+      <rect x="40" y="435" width="235" height="120" rx="5"/>
+    </g>
+    <g font-size="20" font-weight="bold">
+      <text x="60" y="153">PC + USB-UART</text><text x="385" y="153">Zybo Z7</text>
+      <text x="755" y="153">DRV8833 driver</text><text x="755" y="468">Motor + encoder</text>
+      <text x="60" y="468">6 V motor supply</text>
+    </g>
+    <g font-size="16">
+      <text x="60" y="184">3.3 V logic · 115200 baud</text><text x="60" y="212">TX, RX, GND only</text>
+      <text x="385" y="184">125 MHz FPGA clock</text><text x="385" y="216">JE9: RX  /  JE10: TX</text>
+      <text x="385" y="249">JE1: PWM  /  JE2: LOW</text><text x="385" y="282">JE3: A  /  JE4: B</text>
+      <text x="385" y="315">JE7: FLT input</text><text x="385" y="349">SW0: arm  /  BTN0: reset</text>
+      <text x="755" y="184">AIN1: PWM · AIN2: LOW</text><text x="755" y="214">10 kΩ pull-downs to GND</text>
+      <text x="755" y="244">FLT: 10 kΩ to 3.3 V</text><text x="755" y="279">SLP: leave on carrier pull-up</text>
+      <text x="755" y="500">Motor winding: AOUT1/2</text><text x="755" y="530">Encoder VCC: 3.3 V</text>
+      <text x="60" y="502">VIN → driver</text><text x="60" y="530">Separate from Zybo power</text>
+    </g>
+    <g fill="none" stroke="#315e7b" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M275 198H365" marker-start="url(#arrow)"/>
+      <path d="M630 244H735"/>
+      <path d="M735 300H675V321H630"/>
+      <path d="M847 310V435"/>
+      <path d="M735 507H655V282H630"/>
+      <path d="M275 490H315V403H708V170H735"/>
+      <path d="M555 380V573H855V555" stroke="#9b6727"/>
+    </g>
+    <g font-size="15" fill="#315e7b">
+      <text x="281" y="184">UART</text><text x="643" y="232">Control</text>
+      <text x="639" y="342">Fault</text><text x="860" y="371">Motor power</text>
+      <text x="663" y="465">A/B</text><text x="353" y="396">+6 V to VIN</text>
+      <text x="579" y="565" fill="#9b6727">3.3 V to encoder</text>
+    </g>
+    <path d="M40 613H960" stroke="#64696d" stroke-width="3"/>
+    <text x="40" y="643" font-size="16">Common GND: Zybo, driver, motor supply, encoder, and USB-UART adapter.</text>
+    <text x="40" y="666" font-size="15" fill="#64696d">Use docs/hardware.md for exact pins and first-run checks. Motor supply never connects to a Pmod signal.</text>
+  </g>
+</svg>
