@@ -1,0 +1,10 @@
+** Drc report for /workspace/projects/analog-front-end-lab/projects/sensor-interface-pcb/sensor-interface.kicad_pcb **
+** Created on 2026-10-20 08:34:21 **
+
+** Found 0 DRC violations **
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

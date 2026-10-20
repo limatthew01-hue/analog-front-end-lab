@@ -1,0 +1,20 @@
+{
+  "name": "sensor-interface", "revision": "A", "width_mm": 60, "height_mm": 40,
+  "components": [
+    {"ref":"J1","value":"MCU: 3V3 / GND / A0 / A1","kind":"header4","footprint":"Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","at":[54,17,0],"nets":{"1":"+3V3","2":"GND","3":"ADC0","4":"ADC1"}},
+    {"ref":"J2","value":"INPUT0 0-6V","kind":"header2","footprint":"Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","at":[5,10,0],"nets":{"1":"IN0","2":"GND"}},
+    {"ref":"J3","value":"INPUT1 0-6V","kind":"header2","footprint":"Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","at":[5,27,0],"nets":{"1":"IN1","2":"GND"}},
+    {"ref":"U1","value":"MCP6002-I/SN","kind":"opamp","footprint":"Package_SO:SOIC-8_3.9x4.9mm_P1.27mm","at":[31,19,0],"nets":{"1":"BUF0","2":"BUF0","3":"DIV0","4":"GND","5":"DIV1","6":"BUF1","7":"BUF1","8":"+3V3"}},
+    {"ref":"R1","value":"33k 1%","kind":"resistor","footprint":"Resistor_SMD:R_0805_2012Metric","at":[15,10,0],"nets":{"1":"IN0","2":"DIV0"}},
+    {"ref":"R2","value":"33k 1%","kind":"resistor","footprint":"Resistor_SMD:R_0805_2012Metric","at":[21,13,90],"nets":{"1":"DIV0","2":"GND"}},
+    {"ref":"R3","value":"33k 1%","kind":"resistor","footprint":"Resistor_SMD:R_0805_2012Metric","at":[15,28,0],"nets":{"1":"IN1","2":"DIV1"}},
+    {"ref":"R4","value":"33k 1%","kind":"resistor","footprint":"Resistor_SMD:R_0805_2012Metric","at":[21,26,90],"nets":{"1":"DIV1","2":"GND"}},
+    {"ref":"R5","value":"10k 1%","kind":"resistor","footprint":"Resistor_SMD:R_0805_2012Metric","at":[40,10,0],"nets":{"1":"BUF0","2":"ADC0"}},
+    {"ref":"R6","value":"10k 1%","kind":"resistor","footprint":"Resistor_SMD:R_0805_2012Metric","at":[40,28,0],"nets":{"1":"BUF1","2":"ADC1"}},
+    {"ref":"C1","value":"100n X7R 10V+","kind":"capacitor","footprint":"Capacitor_SMD:C_0805_2012Metric","at":[37,16,0],"nets":{"1":"+3V3","2":"GND"}},
+    {"ref":"C2","value":"1u X7R 10V+","kind":"capacitor","footprint":"Capacitor_SMD:C_0805_2012Metric","at":[46,13,90],"nets":{"1":"ADC0","2":"GND"}},
+    {"ref":"C3","value":"1u X7R 10V+","kind":"capacitor","footprint":"Capacitor_SMD:C_0805_2012Metric","at":[46,26,90],"nets":{"1":"ADC1","2":"GND"}},
+    {"ref":"C4","value":"4.7u X7R 10V+","kind":"capacitor","footprint":"Capacitor_SMD:C_0805_2012Metric","at":[51,17,90],"nets":{"1":"+3V3","2":"GND"}}
+  ],
+  "holes": [[3,3],[57,3],[3,37],[57,37]]
+}

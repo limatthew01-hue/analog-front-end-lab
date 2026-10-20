@@ -1,0 +1,10 @@
+{
+  "electrical_components": 14,
+  "verified_pin_connections": 36,
+  "nets": 10,
+  "schematic_to_board_match": true,
+  "drc_violations": 0,
+  "unconnected_pads": 0,
+  "footprint_errors": 0,
+  "erc": "Not run: KiCad 7 CLI has no ERC command. Netlist membership checked separately."
+}

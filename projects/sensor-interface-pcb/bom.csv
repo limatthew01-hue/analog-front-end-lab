@@ -1,0 +1,15 @@
+Reference,Value / requirement,Footprint
+J1,MCU: 3V3 / GND / A0 / A1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J2,INPUT0 0-6V,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+J3,INPUT1 0-6V,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+U1,MCP6002-I/SN,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+R1,33k 1%,Resistor_SMD:R_0805_2012Metric
+R2,33k 1%,Resistor_SMD:R_0805_2012Metric
+R3,33k 1%,Resistor_SMD:R_0805_2012Metric
+R4,33k 1%,Resistor_SMD:R_0805_2012Metric
+R5,10k 1%,Resistor_SMD:R_0805_2012Metric
+R6,10k 1%,Resistor_SMD:R_0805_2012Metric
+C1,100n X7R 10V+,Capacitor_SMD:C_0805_2012Metric
+C2,1u X7R 10V+,Capacitor_SMD:C_0805_2012Metric
+C3,1u X7R 10V+,Capacitor_SMD:C_0805_2012Metric
+C4,4.7u X7R 10V+,Capacitor_SMD:C_0805_2012Metric

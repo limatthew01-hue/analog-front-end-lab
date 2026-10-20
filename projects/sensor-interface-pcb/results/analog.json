@@ -1,0 +1,16 @@
+{
+  "model": "ideal unity buffer; nominal divider and RC only",
+  "divider_gain": 0.5,
+  "cutoff_hz": 15.915494309189533,
+  "divider_gain_corners": [
+    0.495,
+    0.505
+  ],
+  "cutoff_corners_hz": [
+    14.325377416012179,
+    17.862507642188028
+  ],
+  "frequency_points": 401,
+  "ngspice_max_complex_error": 1.2929880679354624e-09,
+  "limits": "Excludes real op-amp offset/noise/stability, ADC acquisition, MLCC DC bias and fabrication parasitics."
+}

@@ -1,0 +1,13 @@
+{
+  "target": "NUCLEO-F401RE / STM32F401RET6",
+  "compiler": "GNU Arm Embedded GCC 13.2.1",
+  "flash_image_bytes": 2748,
+  "static_ram_bytes": 768,
+  "reserved_stack_bytes": 4096,
+  "initial_stack_pointer": "0x20018000",
+  "reset_vector": "0x8000195",
+  "vector_table_entries": 101,
+  "unresolved_symbols": 0,
+  "binary_sha256": "f60dc9918be375827646584c179bb03db8fd483e670c1ef70c8ddb03ce666b10",
+  "physical_board_test": "Not performed"
+}

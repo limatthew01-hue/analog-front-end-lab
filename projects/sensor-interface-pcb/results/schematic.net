@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/projects/analog-front-end-lab/projects/sensor-interface-pcb/sensor-interface.kicad_sch</source>
+    <date>Tue Oct 20 08:23:27 2026</date>
+    <tool>Eeschema 7.0.11+dfsg-1build4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Dual-channel sensor interface</title>
+        <company>Matthew Li</company>
+        <rev>A</rev>
+        <date/>
+        <source>sensor-interface.kicad_sch</source>
+        <comment number="1" value="3.3 V prototype / hardware validation pending"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n X7R 10V+</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="capacitor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>335efdaf-1575-53c2-b428-3192ca706cad</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>1u X7R 10V+</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="capacitor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9b09643-8ed3-5fa6-8240-344a350a08cd</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>1u X7R 10V+</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="capacitor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>acdf38ed-018a-532d-ae90-a298ee4a521d</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>4.7u X7R 10V+</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="capacitor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d26df09-671a-5d84-8e58-a3578e631360</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>MCU HARNESS</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Sensor" part="header4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>14d3e768-93ee-5ad6-9430-bc04fd46fc30</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>INPUT0 0-6V</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Sensor" part="header2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>49fbcc79-3fd9-5112-9631-bb2e241aaa16</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>INPUT1 0-6V</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Sensor" part="header2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d53cee4e-936b-55a3-b331-3d18c80d7b00</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>33k 1%</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="resistor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>155ccf69-280d-50fb-a70a-e4963de5efa9</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>33k 1%</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="resistor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64a62b74-391b-59b6-b05b-c2fb1c08ad35</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>33k 1%</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="resistor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>978e7420-6872-53cb-8db8-e4998d0ac0a1</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>33k 1%</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="resistor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ff87fdf-3636-53f1-baf9-17e2db36a439</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="resistor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4f29b642-6e43-58a3-abb8-7598d4a3d535</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Sensor" part="resistor" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>364b1123-67c5-58e6-ace5-95d6c0c2c34d</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MCP6002-I/SN</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <libsource lib="Sensor" part="opamp" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="sensor-interface.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>255471ca-d835-5049-93ad-d6c70671fb27</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Sensor" part="capacitor">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor" part="header2">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">header2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor" part="header4">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">header4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_out"/>
+        <pin num="2" name="GND" type="power_out"/>
+        <pin num="3" name="ADC0" type="passive"/>
+        <pin num="4" name="ADC1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor" part="opamp">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">opamp</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT_A" type="output"/>
+        <pin num="2" name="IN_A-" type="input"/>
+        <pin num="3" name="IN_A+" type="input"/>
+        <pin num="4" name="VSS" type="power_in"/>
+        <pin num="5" name="IN_B+" type="input"/>
+        <pin num="6" name="IN_B-" type="input"/>
+        <pin num="7" name="OUT_B" type="output"/>
+        <pin num="8" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor" part="resistor">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries/>
+  <nets>
+    <net code="1" name="/+3V3">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="3V3" pintype="power_out"/>
+      <node ref="U1" pin="8" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="2" name="/ADC0">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="ADC0" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="3" name="/ADC1">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="ADC1" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="/BUF0">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="OUT_A" pintype="output"/>
+      <node ref="U1" pin="2" pinfunction="IN_A-" pintype="input"/>
+    </net>
+    <net code="5" name="/BUF1">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="IN_B-" pintype="input"/>
+      <node ref="U1" pin="7" pinfunction="OUT_B" pintype="output"/>
+    </net>
+    <net code="6" name="/DIV0">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="IN_A+" pintype="input"/>
+    </net>
+    <net code="7" name="/DIV1">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="IN_B+" pintype="input"/>
+    </net>
+    <net code="8" name="/GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="GND" pintype="power_out"/>
+      <node ref="J2" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="9" name="/IN0">
+      <node ref="J2" pin="1" pinfunction="IN" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="/IN1">
+      <node ref="J3" pin="1" pinfunction="IN" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+  </nets>
+</export>

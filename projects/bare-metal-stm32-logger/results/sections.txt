@@ -1,0 +1,21 @@
+/workspace/projects/analog-front-end-lab/projects/bare-metal-stm32-logger/build/logger.elf  :
+section            size        addr
+.isr_vector         404   134217728
+.text              2344   134218132
+.data                 0   536870912
+.bss                768   536870912
+.stack             4096   536871680
+.ARM.attributes      47           0
+.debug_line        4617           0
+.debug_line_str      88           0
+.debug_info        5956           0
+.debug_abbrev      1728           0
+.debug_aranges      288           0
+.debug_str        20361           0
+.debug_loclists    1988           0
+.debug_rnglists     337           0
+.debug_macro       4516           0
+.debug_frame        708           0
+Total             48246
+
+

@@ -1,0 +1,10 @@
+{
+  "source": "synthetic; portable C app executed on host, not MCU hardware",
+  "input_pairs": 500,
+  "decoded_frames": 50,
+  "sample_rate_hz": 100,
+  "report_rate_hz": 10,
+  "average_window": 16,
+  "crc_or_average_mismatches": 0,
+  "reported_faults": 0
+}

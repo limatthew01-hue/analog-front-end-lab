@@ -104,6 +104,10 @@ The main simulation assumes an ideal source, ideal bias, and infinite ADC input 
 
 [Zybo Motor Speed Controller](projects/zybo-motor-controller/) implements encoder feedback, fixed-point PI control, 20 kHz PWM, a CRC-protected serial link, and a Python operator panel. It includes a switched-PWM motor simulation, self-checking RTL tests, and a hardware wiring guide. Physical board and motor measurements are pending. This project is self-contained in its own folder.
 
+## PCB and embedded firmware
+
+[Dual-Channel Sensor Interface PCB](projects/sensor-interface-pcb/) contains an editable KiCad schematic and routed two-layer board, BOM, fabrication exports, netlist comparison and native DRC report. [Bare-Metal STM32 Sensor Logger](projects/bare-metal-stm32-logger/) implements timer-triggered ADC sampling, circular DMA, UART queues and CRC-protected telemetry in C. Both are prototype projects; fabrication and physical MCU testing are pending.
+
 ## References
 
 - [Texas Instruments: low-pass filtered non-inverting amplifier](https://www.ti.com/tool/CIRCUIT060057): background on an RC input pole. This lab models the passive RC portion only, not TI's amplifier circuit.

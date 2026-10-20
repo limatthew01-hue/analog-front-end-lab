@@ -1,0 +1,20 @@
+{
+  "c_scenarios_passed": 10,
+  "python_tests_passed": 6,
+  "address_sanitizer": true,
+  "undefined_behavior_sanitizer": true,
+  "leak_sanitizer": false,
+  "leak_sanitizer_note": "Unavailable in the execution container; application has no heap allocation.",
+  "single_bit_corruptions_per_decoder": 176,
+  "c_python_golden_frame_match": true,
+  "target_cross_build": true,
+  "hardware_execution": false,
+  "source_sha256": {
+    "src/logger.c": "a9552bc1f30d5a397bdb5ff6e361b35c0757256b061a3d95c8a96b1cb1ec507b",
+    "src/stm32f401.c": "a22aa548fe630be9b2279011178ced4faec0d8e54e745fd9865ac4d07c37c00c",
+    "src/startup.S": "14aae0345e341b71eb0e7fbf07ac623f6fdc81c5d3b7aff4286ea8e6141a7bd1",
+    "include/logger.h": "773a70024fafad890024951c349d6758e32b1ab14f327d23168afeafa0642e72",
+    "tests/test_core.c": "842adeab99f502636f3c782ec02187116290972ed05d41b86628725fdf358a2e",
+    "tests/test_protocol.py": "0de05ae0f42968d60986a9a8a35b62ee879d74c5e701c988bfdcf589e952139a"
+  }
+}
